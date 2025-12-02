@@ -4,11 +4,12 @@ A professional portfolio website showcasing Oracle Cloud ERP Analytics expertise
 
 ## Features
 
-- Clean, modern design
+- Clean, modern neomorphic design
 - Responsive layout (mobile-friendly)
 - Dynamic work gallery that automatically loads projects from folders
 - Modal view for project images
 - Smooth scrolling navigation
+- Profile image with LinkedIn integration
 
 ## Project Structure
 
@@ -18,18 +19,26 @@ ramya_g_portfolio/
 ├── styles.css          # Stylesheet
 ├── script.js           # JavaScript for dynamic content
 ├── generate-projects.js # Script to generate projects.json
+├── profile.jpg         # Your profile picture
+├── docs/               # Documentation folder
+│   └── adding-work-projects.md # Detailed guide for adding projects
 ├── work/               # Your work projects folder
-│   ├── projects.json   # Auto-generated project list
+│   ├── projects.json   # Auto-generated project list (git ignored)
 │   ├── project-name-1/ # Example project folder
 │   │   ├── image1.jpg
 │   │   ├── image2.jpg
 │   │   └── ...
 │   └── project-name-2/
 │       └── ...
-└── README.md
+├── .gitignore          # Git ignore file
+└── README.md           # This file
 ```
 
-## How to Add Your Work
+## Documentation
+
+For detailed instructions on adding work projects, see [docs/adding-work-projects.md](docs/adding-work-projects.md)
+
+## Quick Start: Adding Your Work
 
 ### Step 1: Create Project Folders
 
