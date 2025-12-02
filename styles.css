@@ -82,23 +82,31 @@ nav {
     color: var(--accent-color);
 }
 
-.hero {
+.hero-about {
     margin-top: 100px;
     background: var(--neo-bg);
-    padding: 120px 20px;
-    text-align: center;
+    padding: 100px 20px;
 }
 
-.hero-content {
+.hero-about-content {
     background: var(--neo-bg);
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border-radius: 30px;
     box-shadow: var(--shadow-light);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.hero-content h1 {
+.intro-text {
+    grid-column: 2;
+    text-align: left;
+}
+
+.intro-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -115,7 +123,8 @@ nav {
 .description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--text-light);
+    color: var(--text-color);
+    line-height: 1.8;
 }
 
 .cta-button {
@@ -135,29 +144,12 @@ nav {
     color: var(--accent-color);
 }
 
-.about {
-    padding: 100px 20px;
-    background: var(--neo-bg);
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-.about-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    grid-column: 1;
+    grid-row: 1 / 3;
 }
 
 .profile-image-container {
@@ -206,49 +198,36 @@ nav {
     height: 24px;
 }
 
-.about-text {
-    background: var(--neo-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-light);
-    margin-bottom: 2rem;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    text-align: center;
-    color: var(--text-color);
-    line-height: 1.8;
-}
-
 .skills {
+    grid-column: 1 / 3;
     margin-top: 2rem;
 }
 
 .skills h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
     list-style: none;
 }
 
 .skills-grid li {
     background: var(--neo-bg);
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 20px;
     text-align: center;
     font-weight: 600;
     color: var(--primary-color);
     box-shadow: var(--shadow-light);
     transition: all 0.3s;
+    font-size: 0.95rem;
 }
 
 .skills-grid li:hover {
@@ -394,12 +373,36 @@ footer {
         padding: 0.6rem 1rem;
     }
 
-    .hero-content h1 {
+    .hero-about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .profile-section {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .intro-text {
+        grid-column: 1;
+        text-align: center;
+    }
+
+    .intro-text h1 {
         font-size: 2rem;
     }
 
     .subtitle {
         font-size: 1.2rem;
+    }
+
+    .skills {
+        grid-column: 1;
+    }
+
+    .skills h3 {
+        text-align: center;
     }
 
     .work-grid {
