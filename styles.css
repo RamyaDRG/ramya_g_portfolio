@@ -212,27 +212,21 @@ nav {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
     list-style: none;
 }
 
 .skills-grid li {
     background: var(--neo-bg);
-    padding: 1rem 1.5rem;
-    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
     text-align: center;
-    font-weight: 600;
-    color: var(--primary-color);
-    box-shadow: var(--shadow-light);
-    transition: all 0.3s;
-    font-size: 0.95rem;
-}
-
-.skills-grid li:hover {
-    box-shadow: var(--shadow-inset);
-    color: var(--accent-color);
+    font-weight: 500;
+    color: var(--text-color);
+    box-shadow: inset 2px 2px 4px #a3b1c6, inset -2px -2px 4px #ffffff;
+    font-size: 0.85rem;
 }
 
 .work {
